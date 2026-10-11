@@ -31,12 +31,12 @@ export const FinalCTA: React.FC = () => {
 
         {/* Texto */}
         <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl mb-8 sm:mb-10">
-          Accede a una colección con más de 300 moldes y ten nuevas opciones disponibles para tus proyectos de costura.
+          Accede a una colección con más de 1.000 moldes y ten nuevas opciones disponibles para tus proyectos de costura.
         </p>
 
         {/* Botón verde */}
         <CtaButton
-          text="Quiero acceder a los +300 moldes"
+          text="Quiero acceder a los +1.000 moldes"
           subtext="⚡ Acceso inmediato • Archivos en formato PDF"
           size="large"
         />

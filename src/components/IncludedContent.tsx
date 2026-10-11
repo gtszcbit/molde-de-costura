@@ -6,7 +6,7 @@ import { Check } from 'lucide-react';
 
 export const IncludedContent: React.FC = () => {
   const inclusions = [
-    'Más de 300 moldes de costura listos para imprimir',
+    'Más de 1.000 moldes de costura listos para imprimir',
     'Diferentes modelos de prendas y siluetas',
     'Archivos digitales en PDF de alta definición',
     '5 Bonos Exclusivos incluidos sin costo extra',
@@ -27,7 +27,7 @@ export const IncludedContent: React.FC = () => {
             Todo lo que recibirás
           </h2>
           <p className="text-base sm:text-lg text-[#64748B]">
-            Un paquete completo y organizado con más de 300 moldes listos para descargar y preparar.
+            Un paquete completo y organizado con más de 1.000 moldes listos para descargar y preparar.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export const IncludedContent: React.FC = () => {
               <ImageSlot
                 imageSrc={IMAGES.mainProduct}
                 imageKeyName="mainProduct"
-                alt="Todo lo que recibirás en la colección de +300 moldes"
+                alt="Todo lo que recibirás en la colección de +1.000 moldes"
                 aspectRatio="square"
                 label="[PRODUCT_MAIN_IMAGE]"
                 sublabel="Muestra general del kit: portada de la colección, carpetas PDF y piezas de patrones."

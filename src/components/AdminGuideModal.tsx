@@ -16,20 +16,12 @@ export const AdminGuideModal: React.FC<AdminGuideModalProps> = ({
 
   const imageDefinitions = [
     { key: 'hero', name: 'Hero / Cabecera', size: '1200 x 750 px', current: activeImages.hero },
-    { key: 'product01', name: 'Bono 1 — Guía de Medidas', size: '1000 x 650 px', current: activeImages.product01 },
-    { key: 'product02', name: 'Bono 2 — Guía de Ajuste', size: '1000 x 650 px', current: activeImages.product02 },
-    { key: 'product03', name: 'Bono 3 — Guía de Telas', size: '1000 x 650 px', current: activeImages.product03 },
-    { key: 'product04', name: 'Bono 4 — Planner de Costura', size: '1000 x 650 px', current: activeImages.product04 },
-    { key: 'product05', name: 'Bono 5 — Moldes de Accesorios', size: '1000 x 650 px', current: activeImages.product05 },
     { key: 'mainProduct', name: 'Qué Recibe (Kit Principal)', size: '800 x 800 px', current: activeImages.mainProduct },
-    { key: 'bonus01', name: 'Bono 01', size: '800 x 500 px', current: activeImages.bonus01 },
-    { key: 'bonus02', name: 'Bono 02', size: '800 x 500 px', current: activeImages.bonus02 },
-    { key: 'bonus03', name: 'Bono 03', size: '800 x 500 px', current: activeImages.bonus03 },
-    { key: 'bonus04', name: 'Bono 04', size: '800 x 500 px', current: activeImages.bonus04 },
-    { key: 'bonus05', name: 'Bono 05', size: '800 x 500 px', current: activeImages.bonus05 },
-    { key: 'testimonial01', name: 'Captura Testimonio 01', size: '600 x 800 px', current: activeImages.testimonial01 },
-    { key: 'testimonial02', name: 'Captura Testimonio 02', size: '600 x 800 px', current: activeImages.testimonial02 },
-    { key: 'testimonial03', name: 'Captura Testimonio 03', size: '600 x 800 px', current: activeImages.testimonial03 }
+    { key: 'bonus01', name: 'Bono 01: Guía de Medidas', size: '600 x 800 px', current: activeImages.bonus01 },
+    { key: 'bonus02', name: 'Bono 02: Guía de Ajuste', size: '600 x 800 px', current: activeImages.bonus02 },
+    { key: 'bonus03', name: 'Bono 03: Guía de Telas', size: '600 x 800 px', current: activeImages.bonus03 },
+    { key: 'bonus04', name: 'Bono 04: Planner de Costura', size: '600 x 800 px', current: activeImages.bonus04 },
+    { key: 'bonus05', name: 'Bono 05: 50 Moldes de Accesorios', size: '600 x 800 px', current: activeImages.bonus05 }
   ];
 
   const copyToClipboard = (text: string) => {
@@ -81,7 +73,7 @@ export const AdminGuideModal: React.FC<AdminGuideModalProps> = ({
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                   <div className="p-2.5 bg-white rounded-lg border border-slate-200">
-                    <div className="font-bold text-[#0F172A] mb-1">Plan Esencial ($55 MXN)</div>
+                    <div className="font-bold text-[#0F172A] mb-1">Plan Esencial ($9.900,00 COP)</div>
                     <div className="text-[11px] text-slate-500 font-mono truncate mb-1">
                       {SITE_CONFIG.checkoutUrlEssential}
                     </div>
@@ -94,7 +86,7 @@ export const AdminGuideModal: React.FC<AdminGuideModalProps> = ({
                     </button>
                   </div>
                   <div className="p-2.5 bg-blue-50/60 rounded-lg border border-blue-200">
-                    <div className="font-bold text-[#1E3A8A] mb-1">Plan Completo VIP ($140 MXN)</div>
+                    <div className="font-bold text-[#1E3A8A] mb-1">Plan Completo VIP ($25.900,00 COP)</div>
                     <div className="text-[11px] text-slate-500 font-mono truncate mb-1">
                       {SITE_CONFIG.checkoutUrlComplete}
                     </div>
@@ -103,6 +95,19 @@ export const AdminGuideModal: React.FC<AdminGuideModalProps> = ({
                       className="text-[#2563EB] hover:underline flex items-center gap-1 font-semibold text-[11px]"
                     >
                       {copiedKey === SITE_CONFIG.checkoutUrlComplete ? <Check className="w-3 h-3 text-green-600" /> : <Copy className="w-3 h-3" />}
+                      Copiar clave
+                    </button>
+                  </div>
+                  <div className="p-2.5 bg-emerald-50/60 rounded-lg border border-emerald-200 sm:col-span-2">
+                    <div className="font-bold text-emerald-800 mb-1">Oferta Pop-up VIP con Descuento ($16.900,00 COP)</div>
+                    <div className="text-[11px] text-slate-500 font-mono truncate mb-1">
+                      {SITE_CONFIG.checkoutUrlDiscountVIP}
+                    </div>
+                    <button
+                      onClick={() => copyToClipboard(SITE_CONFIG.checkoutUrlDiscountVIP)}
+                      className="text-emerald-700 hover:underline flex items-center gap-1 font-semibold text-[11px]"
+                    >
+                      {copiedKey === SITE_CONFIG.checkoutUrlDiscountVIP ? <Check className="w-3 h-3 text-green-600" /> : <Copy className="w-3 h-3" />}
                       Copiar clave
                     </button>
                   </div>

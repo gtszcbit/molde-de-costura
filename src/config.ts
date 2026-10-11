@@ -4,17 +4,20 @@
  */
 
 export const SITE_CONFIG = {
-  productName: "+300 Moldes de Costura",
-  currency: "MXN",
-  // Plan Completo (Recomendado)
-  price: "$140 MXN",
-  oldPrice: "$250 MXN",
-  checkoutUrl: "[CHECKOUT_URL_COMPLETO]",
-  checkoutUrlComplete: "[CHECKOUT_URL_COMPLETO]",
+  productName: "+1.000 Moldes de Costura",
+  currency: "COP",
+  // Plan Completo VIP (Recomendado)
+  price: "$25.900,00 COP",
+  oldPrice: "$59.900,00 COP",
+  checkoutUrl: "https://xpag.global/pay/pb2bpYol",
+  checkoutUrlComplete: "https://xpag.global/pay/pb2bpYol",
   // Plan Esencial (Básico)
-  priceEssential: "$55 MXN",
-  oldPriceEssential: "$100 MXN",
-  checkoutUrlEssential: "[CHECKOUT_URL_ESENCIAL]",
+  priceEssential: "$9.900,00 COP",
+  oldPriceEssential: "$19.900,00 COP",
+  checkoutUrlEssential: "https://xpag.global/pay/QlBWp8o7",
+  // Oferta Especial Pop-up (Descuento VIP para quienes eligen el esencial)
+  priceDiscountVIP: "$16.900,00 COP",
+  checkoutUrlDiscountVIP: "https://xpag.global/pay/QetQH4V9",
   privacyUrl: "#politica-de-privacidad",
   termsUrl: "#terminos-de-uso",
   contactUrl: "mailto:soporte@moldesdecostura.com",
@@ -97,7 +100,7 @@ export const BONUSES_DATA = [
 export const FAQ_DATA = [
   {
     question: "¿Qué voy a recibir?",
-    answer: "Recibirás acceso digital a una colección con más de 300 moldes de costura en archivos PDF."
+    answer: "Recibirás acceso digital a una colección con más de 1.000 moldes de costura en archivos PDF."
   },
   {
     question: "¿Es un producto físico?",
@@ -121,7 +124,7 @@ export const FAQ_DATA = [
   },
   {
     question: "¿Cuántos moldes recibo?",
-    answer: "La colección incluye más de 300 moldes de costura."
+    answer: "La colección incluye más de 1.000 moldes de costura."
   },
   {
     question: "¿En qué formato recibo el material?",

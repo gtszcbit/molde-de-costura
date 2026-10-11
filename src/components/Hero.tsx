@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
 
         {/* Headline principal */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black tracking-tight leading-[1.15] max-w-3xl mb-6">
-          Más de <span className="text-[#FBBF24] underline decoration-dashed decoration-[#FBBF24]/50 underline-offset-8">+300</span> Moldes de Costura{' '}
+          Más de <span className="text-[#FBBF24] underline decoration-dashed decoration-[#FBBF24]/50 underline-offset-8">+1.000</span> Moldes de Costura{' '}
           <span className="block mt-1 sm:mt-2 text-white font-extrabold">
             <span className="bg-gradient-to-r from-white via-blue-50 to-amber-200 bg-clip-text text-transparent">listos para imprimir</span>
           </span>
@@ -88,7 +88,7 @@ export const Hero: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-sm sm:text-base font-semibold text-blue-100 mb-8 sm:mb-10">
           <div className="flex items-center gap-2 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/15">
             <Check className="w-4 h-4 text-[#22C55E]" strokeWidth={3} />
-            <span>Más de 300 moldes</span>
+            <span>Más de 1.000 moldes</span>
           </div>
           <div className="flex items-center gap-2 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/15">
             <Check className="w-4 h-4 text-[#22C55E]" strokeWidth={3} />
@@ -103,9 +103,10 @@ export const Hero: React.FC = () => {
         {/* CTA */}
         <div className="w-full sm:w-auto">
           <CtaButton
-            text="Quiero acceder a los +300 moldes"
+            text="Quiero acceder a los +1.000 moldes"
             subtext="⚡ Acceso digital después de la compra"
             size="large"
+            scrollToId="oferta"
           />
         </div>
       </div>

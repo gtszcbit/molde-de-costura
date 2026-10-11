@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SITE_CONFIG } from '../config';
 import { Check, X, ShieldCheck, ShoppingBag, ArrowRight } from 'lucide-react';
+import { UpsellModal } from './UpsellModal';
 
 export const Offer: React.FC = () => {
+  const [isUpsellOpen, setIsUpsellOpen] = useState(false);
+
   const essentialCheckout = SITE_CONFIG.checkoutUrlEssential.startsWith('[') 
     ? '#oferta' 
     : SITE_CONFIG.checkoutUrlEssential;
@@ -11,7 +14,6 @@ export const Offer: React.FC = () => {
     ? '#oferta' 
     : (SITE_CONFIG.checkoutUrlComplete || SITE_CONFIG.checkoutUrl);
 
-  const isEssentialExternal = essentialCheckout.startsWith('http');
   const isCompleteExternal = completeCheckout.startsWith('http');
 
   const handlePlaceholderClick = (e: React.MouseEvent<HTMLAnchorElement>, url: string) => {
@@ -19,6 +21,18 @@ export const Offer: React.FC = () => {
       e.preventDefault();
       const el = document.getElementById('oferta');
       if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleEssentialClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsUpsellOpen(true);
+  };
+
+  const handleProceedEssential = () => {
+    setIsUpsellOpen(false);
+    if (essentialCheckout.startsWith('http')) {
+      window.location.href = essentialCheckout;
     }
   };
 
@@ -53,12 +67,12 @@ export const Offer: React.FC = () => {
               {/* Caja de Precio */}
               <div className="bg-slate-50/90 border border-slate-200/80 rounded-[20px] p-5 text-center my-6">
                 <div className="text-xs font-semibold text-slate-400 line-through">
-                  De {SITE_CONFIG.oldPriceEssential || '$100 MXN'}
+                  De {SITE_CONFIG.oldPriceEssential || '$19.900,00 COP'}
                 </div>
                 <div className="flex items-center justify-center gap-1.5 my-1 text-[#2563EB]">
                   <span className="text-xl sm:text-2xl font-bold">$</span>
-                  <span className="text-4xl sm:text-5xl font-black tracking-tight">55</span>
-                  <span className="text-lg sm:text-xl font-bold ml-1">MXN</span>
+                  <span className="text-3xl sm:text-4xl font-black tracking-tight">9.900,00</span>
+                  <span className="text-base sm:text-lg font-bold ml-1">COP</span>
                 </div>
                 <div className="text-xs text-slate-500 font-medium">
                   Pago único con tarjeta
@@ -73,7 +87,7 @@ export const Offer: React.FC = () => {
                     <Check className="w-3.5 h-3.5" strokeWidth={3} />
                   </div>
                   <span className="text-sm sm:text-base text-slate-800 leading-snug">
-                    Colección de +300 moldes en PDF versión base
+                    Colección de +1.000 moldes en PDF versión base
                   </span>
                 </div>
 
@@ -118,15 +132,13 @@ export const Offer: React.FC = () => {
 
             {/* Botón Plan Esencial */}
             <div className="pt-2">
-              <a
-                href={essentialCheckout}
-                onClick={(e) => handlePlaceholderClick(e, essentialCheckout)}
-                target={isEssentialExternal ? '_blank' : '_self'}
-                rel={isEssentialExternal ? 'noopener noreferrer' : undefined}
-                className="w-full inline-flex items-center justify-center border-2 border-[#2563EB] text-[#2563EB] hover:bg-blue-50/80 font-bold text-base sm:text-lg py-3.5 px-6 rounded-2xl text-center transition-all duration-200"
+              <button
+                type="button"
+                onClick={handleEssentialClick}
+                className="w-full inline-flex items-center justify-center border-2 border-[#2563EB] text-[#2563EB] hover:bg-blue-50/80 font-bold text-base sm:text-lg py-3.5 px-6 rounded-2xl text-center transition-all duration-200 cursor-pointer"
               >
                 Elegir este
-              </a>
+              </button>
               <div className="mt-3.5 flex items-center justify-center gap-1.5 text-xs text-slate-500 font-medium text-center">
                 <ShieldCheck className="w-4 h-4 text-slate-400" />
                 <span>Pago único · Acceso digital inmediato</span>
@@ -148,7 +160,7 @@ export const Offer: React.FC = () => {
                   COLECCIÓN DIGITAL EN PDF
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-black text-[#0F172A] leading-tight">
-                  +300 Moldes de Costura
+                  +1.000 Moldes de Costura
                 </h3>
                 <div className="text-xs sm:text-sm font-bold text-blue-700 flex items-center gap-1.5 mt-1">
                   <span>⭐ Paquete VIP Todo Incluido · Máximo Ahorro</span>
@@ -158,12 +170,12 @@ export const Offer: React.FC = () => {
               {/* Caja de Precio */}
               <div className="bg-slate-50/90 border border-slate-200/80 rounded-[20px] p-5 text-center my-6">
                 <div className="text-xs font-semibold text-slate-400 line-through">
-                  Precio regular: De {SITE_CONFIG.oldPrice || '$250 MXN'}
+                  Precio regular: De {SITE_CONFIG.oldPrice || '$59.900,00 COP'}
                 </div>
                 <div className="flex items-center justify-center gap-1.5 my-1 text-[#2563EB]">
                   <span className="text-xl sm:text-2xl font-bold">$</span>
-                  <span className="text-4xl sm:text-5xl font-black tracking-tight">140</span>
-                  <span className="text-lg sm:text-xl font-bold ml-1">MXN</span>
+                  <span className="text-3xl sm:text-4xl font-black tracking-tight">25.900,00</span>
+                  <span className="text-base sm:text-lg font-bold ml-1">COP</span>
                 </div>
                 <div className="text-xs font-black text-[#2563EB] uppercase tracking-wider">
                   PAGO ÚNICO
@@ -177,7 +189,7 @@ export const Offer: React.FC = () => {
                     <Check className="w-3.5 h-3.5" strokeWidth={3} />
                   </div>
                   <span className="text-sm sm:text-base text-slate-800 leading-snug">
-                    <strong className="font-bold text-[#0F172A]">Colección completa:</strong> +300 moldes de costura listos
+                    <strong className="font-bold text-[#0F172A]">Colección completa:</strong> +1.000 moldes de costura listos
                   </span>
                 </div>
 
@@ -267,6 +279,13 @@ export const Offer: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Pop-up Modal de Oferta Especial con Descuento ($16.900,00 COP) */}
+      <UpsellModal
+        isOpen={isUpsellOpen}
+        onClose={() => setIsUpsellOpen(false)}
+        onProceedEssential={handleProceedEssential}
+      />
     </section>
   );
 };

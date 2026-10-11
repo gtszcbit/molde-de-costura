@@ -4,7 +4,7 @@ export const Benefits: React.FC = () => {
   const benefitsList = [
     {
       icon: '✂️',
-      title: '+300 moldes',
+      title: '+1.000 moldes',
       description: 'Una amplia colección con diferentes modelos para explorar nuevos proyectos de costura.'
     },
     {

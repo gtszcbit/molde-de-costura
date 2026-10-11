@@ -3,8 +3,6 @@ import { IMAGES as DEFAULT_IMAGES } from './config';
 import { TopBar } from './components/TopBar';
 import { Hero } from './components/Hero';
 import { Benefits } from './components/Benefits';
-import { ProductGallery } from './components/ProductGallery';
-import { HowItWorks } from './components/HowItWorks';
 import { IncludedContent } from './components/IncludedContent';
 import { SocialProof } from './components/SocialProof';
 import { Bonuses } from './components/Bonuses';
@@ -36,13 +34,7 @@ export const App: React.FC = () => {
       {/* 3. BENEFICIOS */}
       <Benefits />
 
-      {/* 4. GALERÍA DEL PRODUCTO (MIRA CÓMO QUEDA) */}
-      <ProductGallery />
-
-      {/* 5. CÓMO FUNCIONA: PASO A PASO */}
-      <HowItWorks />
-
-      {/* 6. QUÉ RECIBE */}
+      {/* 4. QUÉ RECIBE */}
       <IncludedContent />
 
       {/* 7. GARANTÍA DE 7 DÍAS */}
