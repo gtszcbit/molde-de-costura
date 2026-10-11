@@ -26,24 +26,32 @@ export const SITE_CONFIG = {
   showUrgencyBar: true
 };
 
+import heroImg from './assets/images/regenerated_image_1791682406884.png';
+import bono1Img from './assets/images/regenerated_image_1791683322136.png';
+import bono2Img from './assets/images/regenerated_image_1791683862910.png';
+import bono3Img from './assets/images/regenerated_image_1791684539078.png';
+import bono4Img from './assets/images/bono4_planner_costura_1791684610833.jpg';
+import bono5Img from './assets/images/regenerated_image_1791685695916.png';
+import mainProductImg from './assets/images/regenerated_image_1791686843023.png';
+
 export const IMAGES = {
-  hero: "/src/assets/images/regenerated_image_1791682406884.png",
-  product01: "/src/assets/images/regenerated_image_1791683322136.png",
-  product02: "/src/assets/images/regenerated_image_1791683862910.png",
-  product03: "/src/assets/images/regenerated_image_1791684539078.png",
-  product04: "/src/assets/images/bono4_planner_costura_1791684610833.jpg",
-  product05: "/src/assets/images/regenerated_image_1791685695916.png",
+  hero: heroImg,
+  product01: bono1Img,
+  product02: bono2Img,
+  product03: bono3Img,
+  product04: bono4Img,
+  product05: bono5Img,
   printedPattern: "[PRINTED_PATTERN_IMAGE]",
   patternDetail: "[PATTERN_DETAIL_IMAGE]",
   clothingExample01: "[CLOTHING_EXAMPLE_01]",
   clothingExample02: "[CLOTHING_EXAMPLE_02]",
   clothingExample03: "[CLOTHING_EXAMPLE_03]",
-  mainProduct: "/src/assets/images/regenerated_image_1791686843023.png",
-  bonus01: "/src/assets/images/regenerated_image_1791683322136.png",
-  bonus02: "/src/assets/images/regenerated_image_1791683862910.png",
-  bonus03: "/src/assets/images/regenerated_image_1791684539078.png",
-  bonus04: "/src/assets/images/bono4_planner_costura_1791684610833.jpg",
-  bonus05: "/src/assets/images/regenerated_image_1791685695916.png",
+  mainProduct: mainProductImg,
+  bonus01: bono1Img,
+  bonus02: bono2Img,
+  bonus03: bono3Img,
+  bonus04: bono4Img,
+  bonus05: bono5Img,
   testimonial01: "[TESTIMONIAL_IMAGE_01]",
   testimonial02: "[TESTIMONIAL_IMAGE_02]",
   testimonial03: "[TESTIMONIAL_IMAGE_03]"
