@@ -22,36 +22,36 @@ export const SocialProof: React.FC = () => {
   const testimonials: TestimonialItem[] = [
     {
       id: '1',
-      name: 'María González',
-      role: 'Costurera aficionada',
+      name: 'Maria Gonçalves',
+      role: 'Costureira por paixão',
       avatarText: 'MG',
       avatarBg: 'bg-[#E11D48]',
       date: '08/10/2026',
-      title: '“¡Una colección muy práctica para mis proyectos!”',
-      text: 'Me encantó tener tantos moldes organizados en un solo lugar. Puedo elegir el modelo que quiero, imprimirlo y preparar mi próximo proyecto con más facilidad. La variedad me inspira a probar prendas diferentes y seguir aprendiendo.',
-      tag: 'Proyectos personales'
+      title: '“Uma coleção super prática para os meus projetos!”',
+      text: 'Adorei ter tantos moldes organizados em um só lugar. Posso escolher o modelo que quero, imprimir em folhas comuns e costurar sem complicação. Já fiz dois vestidos e uma blusa. Os traços são perfeitos!',
+      tag: 'Projetos pessoais'
     },
     {
       id: '2',
-      name: 'Lucía Pérez',
-      role: 'Emprendedora de costura',
+      name: 'Luciana Pereira',
+      role: 'Empreendedora de costura',
       avatarText: 'LP',
       avatarBg: 'bg-[#2563EB]',
       date: '09/10/2026',
-      title: '“Más ideas y opciones para mi taller”',
-      text: 'Lo que más me gustó fue la variedad de la colección. Tener los archivos en formato digital me ayuda a consultar los moldes y escoger nuevas ideas para mi taller. Los bonos también son un buen complemento para organizar cada proyecto.',
-      tag: 'Proyectos de taller'
+      title: '“Mais ideias e opções para o meu ateliê”',
+      text: 'O que mais gostei foi da variedade da coleção. Ter os arquivos em formato digital me ajuda a consultar os moldes e escolher novos modelos para minhas clientes. Os 5 bônus são um complemento incrível.',
+      tag: 'Projetos de ateliê'
     },
     {
       id: '3',
-      name: 'Ana Ramírez',
-      role: 'Aficionada a la costura creativa',
+      name: 'Ana Ramirez',
+      role: 'Aficionada por costura criativa',
       avatarText: 'AR',
       avatarBg: 'bg-[#059669]',
       date: '10/10/2026',
-      title: '“¡Una gran fuente de inspiración para crear!”',
-      text: 'Disfruto mucho la costura y esta colección me dio nuevas ideas para mis próximos trabajos. Me resulta cómodo guardar los archivos y tenerlos disponibles cuando quiero imprimir un molde. Es una opción muy práctica para explorar mi creatividad.',
-      tag: 'Costura creativa'
+      title: '“Uma grande fonte de inspiração para criar!”',
+      text: 'Gosto muito de costurar e essa coleção me deu dezenas de ideias novas. É super prático guardar os arquivos e imprimir apenas o molde que vou usar. Uma opção excelente para soltar a criatividade.',
+      tag: 'Costura criativa'
     }
   ];
 
@@ -61,17 +61,17 @@ export const SocialProof: React.FC = () => {
         {/* Encabezado Principal */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0F172A] tracking-tight leading-tight mb-4">
-            Lo que dicen quienes ya utilizan los{' '}
+            O que dizem quem já utiliza os{' '}
             <span className="text-[#2563EB] block sm:inline">
-              +300 Moldes de Costura
+              +1.000 Moldes de Costura
             </span>
           </h2>
           <p className="text-base sm:text-lg text-[#64748B] leading-relaxed max-w-2xl mx-auto">
-            Descubre las experiencias de personas que ya utilizan nuestra colección de moldes para crear nuevos proyectos de costura.
+            Veja a experiência de quem já recebeu e está usando nossa coleção para criar lindas peças de costura.
           </p>
         </div>
 
-        {/* Tarjeta Superior de Resumen de Calificación */}
+        {/* Tarjeta Superior de Resumo de Calificação */}
         <div className="bg-white rounded-[26px] border border-stone-200/80 p-6 sm:p-8 mb-10 shadow-xs">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             {/* Columna Izquierda: Puntuación 4.9 / 5.0 */}
@@ -98,7 +98,7 @@ export const SocialProof: React.FC = () => {
                   <Check className="w-3.5 h-3.5" strokeWidth={3} />
                 </div>
                 <span className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong className="font-bold text-slate-900">Archivos digitales</strong> fáciles de consultar
+                  <strong className="font-bold text-slate-900">Arquivos digitais</strong> fáceis de consultar e baixar
                 </span>
               </div>
 
@@ -107,7 +107,7 @@ export const SocialProof: React.FC = () => {
                   <Check className="w-3.5 h-3.5" strokeWidth={3} />
                 </div>
                 <span className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong className="font-bold text-slate-900">Gran variedad de moldes</strong> para diferentes proyectos
+                  <strong className="font-bold text-slate-900">Grande variedade de moldes</strong> para diversos projetos
                 </span>
               </div>
 
@@ -116,7 +116,7 @@ export const SocialProof: React.FC = () => {
                   <Check className="w-3.5 h-3.5" strokeWidth={3} />
                 </div>
                 <span className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong className="font-bold text-slate-900">Acceso digital</strong> después de completar la compra
+                  <strong className="font-bold text-slate-900">Acesso digital imediato</strong> logo após a compra
                 </span>
               </div>
             </div>
@@ -128,13 +128,13 @@ export const SocialProof: React.FC = () => {
                 RECOMENDADO
               </span>
               <p className="text-xs text-slate-500 leading-relaxed max-w-xs">
-                Para personas que aman la costura y quieren tener más moldes disponibles para sus próximos proyectos.
+                Para quem ama costurar e quer ter moldes testados e aprovados sempre à disposição.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Grid de 3 Testimonios Idénticos a la Foto */}
+        {/* Grid de 3 Testemunhos */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((item) => (
             <div
@@ -142,7 +142,7 @@ export const SocialProof: React.FC = () => {
               className="bg-white rounded-[24px] border border-stone-200/90 p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow"
             >
               <div>
-                {/* Estrellas y Fecha */}
+                {/* Estrelas e Data */}
                 <div className="flex items-center justify-between gap-2 mb-4">
                   <div className="flex items-center gap-0.5 text-amber-400">
                     {[...Array(5)].map((_, i) => (
@@ -154,18 +154,18 @@ export const SocialProof: React.FC = () => {
                   </span>
                 </div>
 
-                {/* Título de la reseña */}
+                {/* Título da avaliação */}
                 <h3 className="text-base sm:text-lg font-bold text-[#0F172A] mb-3 leading-snug">
                   {item.title}
                 </h3>
 
-                {/* Texto del testimonio */}
+                {/* Texto do depoimento */}
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   {item.text}
                 </p>
               </div>
 
-              {/* Perfil del comprador al pie del card */}
+              {/* Perfil */}
               <div className="mt-6 pt-5 border-t border-slate-100">
                 <div className="flex items-center gap-3 mb-3">
                   <div className={`w-10 h-10 rounded-full ${item.avatarBg} text-white font-bold text-sm flex items-center justify-center shrink-0 shadow-2xs`}>

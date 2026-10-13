@@ -11,7 +11,7 @@ export const TopBar: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-center gap-1.5 sm:gap-2">
         <span aria-hidden="true" className="select-none">🧵</span>
-        <span>Oferta especial disponible por tiempo limitado</span>
+        <span>Oferta especial disponível por tempo limitado</span>
         <span aria-hidden="true" className="select-none">✂️</span>
       </div>
     </aside>

@@ -16,13 +16,13 @@ export const FAQ: React.FC = () => {
         {/* Encabezado */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <span className="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-[#1E3A8A] text-xs font-bold tracking-wider uppercase mb-3">
-            ❓ PREGUNTAS FRECUENTES
+            ❓ PERGUNTAS FREQUENTES
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0F172A] tracking-tight leading-tight mb-4">
-            Resuelve tus dudas
+            Tire suas dúvidas
           </h2>
           <p className="text-base sm:text-lg text-[#64748B]">
-            Todo lo que necesitas saber antes de acceder a la colección de moldes.
+            Tudo o que você precisa saber antes de acessar a coleção de moldes.
           </p>
         </div>
 

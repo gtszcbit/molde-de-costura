@@ -4,6 +4,8 @@ import { SITE_CONFIG } from '../config';
 interface CtaButtonProps {
   text: string;
   subtext?: string;
+  subtextClassName?: string;
+  subtextStyle?: React.CSSProperties;
   className?: string;
   size?: 'normal' | 'large';
   fullWidth?: boolean;
@@ -13,6 +15,8 @@ interface CtaButtonProps {
 export const CtaButton: React.FC<CtaButtonProps> = ({
   text,
   subtext,
+  subtextClassName = '',
+  subtextStyle,
   className = '',
   size = 'large',
   fullWidth = false,
@@ -66,7 +70,10 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
       </a>
 
       {subtext && (
-        <p className="mt-2.5 text-xs sm:text-sm text-slate-500 font-medium text-center">
+        <p
+          className={`mt-2.5 text-xs sm:text-sm text-slate-500 font-medium text-center ${subtextClassName}`}
+          style={subtextStyle}
+        >
           {subtext}
         </p>
       )}
