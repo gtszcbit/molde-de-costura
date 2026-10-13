@@ -1,6 +1,8 @@
 import React from 'react';
 import { SITE_CONFIG } from '../config';
 
+import { scrollToOffer } from '../utils/scroll';
+
 interface CtaButtonProps {
   text: string;
   subtext?: string;
@@ -23,6 +25,12 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
   scrollToId = 'oferta'
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (scrollToId === 'oferta') {
+      e.preventDefault();
+      scrollToOffer();
+      return;
+    }
+
     if (scrollToId) {
       e.preventDefault();
       const target = document.getElementById(scrollToId);
@@ -32,13 +40,10 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
       return;
     }
 
-    // Si no tiene scrollToId pero el checkout es un placeholder, hacer scroll a la oferta
+    // Se não tem scrollToId mas o checkout é um placeholder, fazer scroll para a oferta
     if (SITE_CONFIG.checkoutUrl === '[CHECKOUT_URL]' || SITE_CONFIG.checkoutUrl.startsWith('[')) {
       e.preventDefault();
-      const offerSection = document.getElementById('oferta');
-      if (offerSection) {
-        offerSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      scrollToOffer();
     }
   };
 

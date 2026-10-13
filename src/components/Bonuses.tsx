@@ -2,6 +2,8 @@ import React from 'react';
 import { SITE_CONFIG, IMAGES } from '../config';
 import { Gift, ArrowRight } from 'lucide-react';
 
+import { scrollToOffer } from '../utils/scroll';
+
 export const Bonuses: React.FC = () => {
   if (!SITE_CONFIG.showBonuses) return null;
 
@@ -15,10 +17,7 @@ export const Bonuses: React.FC = () => {
 
   const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const offerSection = document.getElementById('oferta');
-    if (offerSection) {
-      offerSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToOffer();
   };
 
   return (

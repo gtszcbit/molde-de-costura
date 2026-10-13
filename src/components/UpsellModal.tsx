@@ -2,6 +2,8 @@ import React from 'react';
 import { SITE_CONFIG } from '../config';
 import { X, AlertTriangle, Flame, ShieldCheck } from 'lucide-react';
 
+import { scrollToOffer } from '../utils/scroll';
+
 interface UpsellModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -22,10 +24,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({
     if (discountCheckout.startsWith('[') || discountCheckout.startsWith('#')) {
       e.preventDefault();
       onClose();
-      const offerSection = document.getElementById('oferta');
-      if (offerSection) {
-        offerSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      scrollToOffer();
     }
   };
 
