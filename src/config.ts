@@ -21,7 +21,7 @@ export const SITE_CONFIG = {
   checkoutUrl: "https://pay.cakto.com.br/38xqqa4_1198747",
   checkoutUrlComplete: "https://pay.cakto.com.br/38xqqa4_1198747",
   // Plano Essencial (Básico)
-  priceEssential: "R$ 10,90",
+  priceEssential: "R$ 12,90",
   oldPriceEssential: "R$ 29,90",
   checkoutUrlEssential: "https://pay.cakto.com.br/fqhzyvq",
   // Oferta Especial Pop-up (Desconto VIP quando clica no Essencial)

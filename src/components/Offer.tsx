@@ -74,7 +74,7 @@ export const Offer: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-center gap-1.5 my-0.5 sm:my-1 text-[#2563EB]">
                   <span className="text-lg sm:text-2xl font-bold">R$</span>
-                  <span className="text-3xl sm:text-5xl font-black tracking-tight">10,90</span>
+                  <span className="text-3xl sm:text-5xl font-black tracking-tight">{SITE_CONFIG.priceEssential.replace('R$', '').trim()}</span>
                 </div>
                 <div className="text-[11px] sm:text-xs text-slate-500 font-medium">
                   Pagamento único no cartão ou Pix
@@ -139,7 +139,7 @@ export const Offer: React.FC = () => {
                 onClick={handleEssentialClick}
                 className="w-full inline-flex items-center justify-center border-2 border-[#2563EB] text-[#2563EB] hover:bg-blue-50/80 font-bold text-sm sm:text-lg py-3 sm:py-3.5 px-4 sm:px-6 rounded-2xl text-center transition-all duration-200 cursor-pointer"
               >
-                Escolher Essencial (R$ 10,90)
+                Escolher Essencial ({SITE_CONFIG.priceEssential})
               </button>
               <div className="mt-2.5 sm:mt-3.5 flex items-center justify-center gap-1.5 text-xs text-slate-500 font-medium text-center">
                 <ShieldCheck className="w-4 h-4 text-slate-400 shrink-0" />

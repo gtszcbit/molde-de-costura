@@ -102,7 +102,7 @@ export const UpsellModal: React.FC<UpsellModalProps> = ({
           <span>Sim! Quero levar por {SITE_CONFIG.priceDiscountVIP}</span>
         </a>
 
-        {/* Botão Secundário (Continuar com o plano de R$ 10,90) */}
+        {/* Botão Secundário (Continuar com o plano essencial) */}
         <button
           onClick={onProceedEssential}
           className="w-full bg-blue-50/70 hover:bg-blue-100/70 border border-blue-200 text-[#2563EB] font-bold text-xs sm:text-sm py-3.5 px-6 rounded-2xl text-center transition-all cursor-pointer"
